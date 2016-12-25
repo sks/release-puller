@@ -85,7 +85,7 @@ func main() {
 			log.Printf("Downloading the asset %s to the location %s", asset.Name, downlaodTo)
 			err = downloadAsset(asset, downlaodTo)
 			if err != nil {
-				log.Fatal("Error saving the file %s to %s", asset.Name, downlaodTo)
+				log.Fatalf("Error saving the file %s to %s: %s", asset.Name, downlaodTo, err)
 			}
 		} else {
 			log.Printf("Skipping the asset %s", asset.Name)
